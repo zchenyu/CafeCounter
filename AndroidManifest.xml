@@ -1,0 +1,100 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.chenyuzhao.cafecounter"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_cafe_counter" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ManageAccountsActivity"
+            android:label="@string/title_activity_manage_accounts" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.CafeCounterActivity" />
+        </activity>
+        <activity
+            android:name=".EditTransactionActivity"
+            android:label="@string/title_activity_new_transaction" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.CafeCounterActivity" />
+        </activity>
+        <activity
+            android:name=".TransactionLogActivity"
+            android:label="@string/title_activity_transaction_log" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.CafeCounterActivity" />
+        </activity>
+        <activity
+            android:name=".NewAccountActivity"
+            android:label="@string/title_activity_new_account" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.ManageAccountsActivity" />
+        </activity>
+        <activity
+            android:name=".EditAccountActivity"
+            android:label="@string/title_activity_edit_account" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.ManageAccountsActivity" />
+        </activity>
+        <activity
+            android:name=".AnalyticsActivity"
+            android:label="@string/title_activity_analytics" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AccountAnalyticsActivity"
+            android:label="@string/title_activity_account_analytics" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.AnalyticsActivity" />
+        </activity>
+        <activity
+            android:name=".RecurringTransactionsActivity"
+            android:label="@string/title_activity_recurring_transactions" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EditRecurringTransactionActivity"
+            android:label="@string/title_activity_edit_recurring_transaction" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.chenyuzhao.cafecounter.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FileDialogActivity"
+            android:label="@string/title_activity_file_dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
